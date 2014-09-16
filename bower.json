@@ -1,0 +1,23 @@
+{
+  "name": "sandymoreno@github.com",
+  "version": "0.1.0",
+  "authors": [
+    "Sandy Moreno Baro <sandy.moreno.baro@gmail.com>"
+  ],
+  "description": "Personal portfolio",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation": "latest",
+    "jquery": "<2.0.0",
+    "font-awesome": "~4.0.3"
+
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
