@@ -9,23 +9,48 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
+
+<div class="menu-wrap">
+    <nav class="menu">
+        <div class="profile"><img src="/images/img_profile.jpg" alt="Sandy Moreno"/><span>Sandy Moreno</span></div>
+        <div class="icon-list">
+            <a data-scroll href="#services"><i class="fa fa-fw fa-circle"></i><span>SERVICES</span></a>
+            <a data-scroll href="#work"><i class="fa fa-fw fa-briefcase"></i><span>LATEST WORK</span></a>
+            <a data-scroll href="#about"><i class="fa fa-fw fa-book"></i><span>SKILLS</span></a>
+            <a data-scroll href="#contact"><i class="fa fa-fw fa-envelope"></i><span>CONTACT</span></a>
+        </div>
+    </nav>
+    <button class="close-button" id="close-button"></button>
+</div>
+<button class="menu-button" id="open-button"></button>
+
+<div class="content-wrap">
+<div class="content">
+
+<section class="main">
+    <header class="main-head">
+        <div class="row">
+            <div class="small-12 columns">
+                <a href="#"><img class="brand" src="/images/logo5_fff.png" alt="sandy moreno logo"></a>
+
+                <div class="headline">
+                    <h1>FAST & PROFESSIONAL WEB PROJECTS</h1>
+                    <h3>Hi! I'm a freelance web developer based in La Habana. I do web projects everyday with open source tegnologies.</h3>
+                    <a data-scroll href="#services" class="button">Take a look!</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    
+</section>
+
 {{ content }}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
-</script>
+</div>
+</div>
+
+{% include footer.html %}
 </body>
 </html>

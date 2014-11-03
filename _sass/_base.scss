@@ -1,204 +1,108 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
+@charset "UTF-8";
+
+//@import "compass/css3";
+@import "../bower_components/foundation/scss/foundation/functions";
+
+$sm-primary: #e65540;
+
+
+$primary-color: $sm-primary;
+
+/*
 
 
 
 
-/**
- * Basic styling
- */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-}
+$f-dropdown-border-color: scale-color($holi-purple, $lightness: -20%);
+
+//setting html classes
+$include-html-table-classes: false;
+
+//pickadate hp theme
+$pickadate-primary-color: $holi-orange;
+$pickadate-highlight-hover-color: lighten($holi-orange, 20%);
+$pickadate-triangle-color: $holi-orange;
+$pickadate-arrows-color: $holi-purple;
+$pickadate-text-color: $holi-purple;
+
+//Tabs
+$hp-tab-color: $holi-purple;
+$tabs-navigation-padding: rem-calc(10);
+$tabs-navigation-bg-color: #FFFFFF;
+$tabs-navigation-hover-bg-color: #FFFFFF;
+$tabs-navigation-active-bg-color: #fff;
+$tabs-navigation-font-color: #222;
+$tabs-navigation-font-size: rem-calc(16);
+$tabs-content-margin-bottom: rem-calc(24);
+//  $tabs-content-padding: $column-gutter/2;
+$tabs-vertical-navigation-margin-bottom: 1.25rem;*/
+
+
+$row-width: rem-calc(1200);
+
+/*//tab-bar
+$tabbar-bg: $primary-color;
+$off-canvas-bg: scale-color($primary-color, $lightness: -25%);
+$off-canvas-label-bg: scale-color($primary-color, $lightness: -30%);
+$off-canvas-label-color: #FAFAFA;
+
+//custom vars
 
 
 
-/**
- * Set `margin-bottom` to maintain vertycal rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
+//Pagination
+$pagination-li-font-size: rem-calc(16);*/
+
+
+//fa font path
+$fa-font-path: "/fonts";
+$container-bg: #fff;
+$sec-color: #eee;
+$alert-color: #d81f25;
+
+$body-font-family: 'Lato', sans-serif;
+
+$header-font-color: #444;
+
+
+//
+//$slick-prev-character: '\f053';
+//$slick-next-character: '\f054';
+//$slick-arrow-color:$holi-purple;
+
+
+@import "../bower_components/foundation/scss/normalize";
+
+// Behold, here are all the Foundation components.
+@import
+"../bower_components/foundation/scss/foundation/components/grid",
+
+"../bower_components/foundation/scss/foundation/components/alert-boxes",
+"../bower_components/foundation/scss/foundation/components/block-grid",
+"../bower_components/foundation/scss/foundation/components/breadcrumbs",
+
+"../bower_components/foundation/scss/foundation/components/buttons",
 
 
 
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
+"../bower_components/foundation/scss/foundation/components/forms",
+"../bower_components/foundation/scss/foundation/components/inline-lists",
 
 
 
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
-
-figcaption {
-    font-size: $small-font-size;
-}
 
 
 
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
 
 
 
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
 
 
 
-/**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
+"../bower_components/foundation/scss/foundation/components/type",
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
+"../bower_components/foundation/scss/foundation/components/visibility";
 
 
+@import "../bower_components/font-awesome/scss/font-awesome";
 
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
-}
